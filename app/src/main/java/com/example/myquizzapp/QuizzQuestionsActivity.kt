@@ -1,18 +1,15 @@
 package com.example.myquizzapp
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
-import android.widget.Toast
 import androidx.core.content.ContextCompat
 
 class QuizzQuestionsActivity : AppCompatActivity(), View.OnClickListener {
@@ -74,7 +71,7 @@ class QuizzQuestionsActivity : AppCompatActivity(), View.OnClickListener {
 
         ivImage?.setImageResource(question.image)
         progressBar?.progress = mCurrentPosition
-        tvProcess?.text = "$mCurrentPosition/${progressBar?.max}"
+        tvProcess?.text = "$mCurrentPosition/${mQuestionsLists?.size}"
 
         tvQuestion?.text = question.question
         tvOptionOne?.text = question.optionOne
